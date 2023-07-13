@@ -31,7 +31,7 @@ void loop() {
 
   // Display frequency on the serial monitor
   Serial.print("Frequency: ");
-  Serial.print(frequency);
+  Serial.print(frequency/2);
   Serial.println(" Hz");
 
   delay(100);  // Delay for stability
