@@ -9,15 +9,12 @@ void setup() {
   Serial.begin(115200);
   pinMode(ledPin, OUTPUT);
 
-  // Initialize logic block 2
-  // Logic block 2 has three inputs, PD0, PD1 and PD2.
-  // It has one output, but this is disabled because we're using an interrupt instead.
   Logic1.enable = true;                     // Enable logic block 2
   Logic1.input0 = logic::in::input;         // Set PC0 as input
   Logic1.input1 = logic::in::input_pullup;  // Set PC1 as input with pullup
   Logic1.output = logic::out::enable;       // Enable logic block 2 output pin (PC3)
   Logic1.filter = logic::filter::disable;   // No output filter enabled
-  Logic1.truth = 0xF7;                      // Set AND truth table
+  Logic1.truth = 0xF7;                      // Set NAND truth table
 
   // Initialize logic block 2
   Logic1.init();
