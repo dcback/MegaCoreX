@@ -6,5 +6,5 @@ void setup() {
 
 void loop() {  // LED구동 핀을 로직(H/L)을 바꾸면서 1초 단위로 반복적으로 켜고 끈다.
   digitalWrite(ledPin, !digitalRead(ledPin));
-  delay(1000);
+  delay(1000);  // 1초 지연
 }
